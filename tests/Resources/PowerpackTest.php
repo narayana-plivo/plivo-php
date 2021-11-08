@@ -55,7 +55,7 @@ class PowerpackTest extends BaseTestCase {
         self::assertNotNull($res);
     }
 
-     list the powerpack numbers 
+    // list the powerpack numbers 
     function testNumberpoolList()
     {
         $uuid = "8711d367-469e-497d-9b26-ff79390bcfe8";
