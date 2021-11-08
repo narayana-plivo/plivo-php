@@ -104,8 +104,6 @@ class PowerpackTest extends BaseTestCase {
 
         $this->mock(new PlivoResponse($request,200, $body));
         $actual = $powerpack->list_shortcodes();
-        //$actual = $powerpack->number_pool->shortcodes->list();
-        $this->assertRequest($request);
 
         self::assertNotNull($actual);
     }
@@ -136,8 +134,6 @@ class PowerpackTest extends BaseTestCase {
 
         $this->mock(new PlivoResponse($request,200, $body));
         $actual = $powerpack->add_number($number);
-        // $actual = $powerpack->number_pool->numbers->add($number);
-        $this->assertRequest($request);
         self::assertNotNull($actual);
     }
 
@@ -164,8 +160,6 @@ class PowerpackTest extends BaseTestCase {
 
         $this->mock(new PlivoResponse($request,200, $body));
         $actual = $powerpack->remove_number($number);
-        // $actual = $powerpack.number_pool->numbers->remove($number)
-        $this->assertRequest($request);
         self::assertNotNull($actual);
     }
     
@@ -191,9 +185,6 @@ class PowerpackTest extends BaseTestCase {
 
         $this->mock(new PlivoResponse($request,200, $body));
         $deleteResponse = $powerpack->delete();
-
-        $this->assertRequest($request);
-
         self::assertNotNull($deleteResponse);
     }
 
